@@ -23,16 +23,47 @@
   </nav>
 </header>
 
-<section class="hero">
-  <div class="wrap">
-    <div class="reveal">
-      <p class="eyebrow">Product &amp; UX Designer — Based in Nigeria</p>
-      <h1>I design digital experiences people <em>remember fondly</em>.</h1>
-      <p class="hero-sub">With 6 years across marketing, branding, and product design, I turn complex problems into clear, human-centered solutions — for fintech, SaaS, and startups building what's next.</p>
-      <div class="hero-actions">
+<section class="dark-hero">
+  <svg width="0" height="0" style="position:absolute">
+    <defs>
+      <filter id="goo">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="16" result="blur" />
+        <feColorMatrix in="blur" mode="matrix"
+          values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 22 -9" result="goo" />
+        <feComposite in="SourceGraphic" in2="goo" operator="atop" />
+      </filter>
+    </defs>
+  </svg>
+
+  <div class="dh-inner">
+    <div class="blob-scene">
+      <div class="blob blob-a"></div>
+      <div class="blob blob-b"></div>
+      <div class="blob blob-c"></div>
+      <div class="blob blob-d"></div>
+      <div class="blob blob-e"></div>
+    </div>
+    <div class="dh-dot orange"></div>
+    <div class="dh-dot yellow"></div>
+
+    <div class="dh-content">
+      <p class="dh-eyebrow">Product &amp; UX Design</p>
+      <h1 class="dh-title">Digital Experiences,<br>Designed by Samuel Obiora</h1>
+      <p class="dh-sub">6 years across marketing, branding, and product design — for fintech, SaaS, and startups building what's next.</p>
+      <div class="dh-actions">
         <a href="projects.html" class="btn btn-primary">View Projects</a>
         <a href="about.html" class="btn btn-outline">About Me</a>
       </div>
+    </div>
+
+    <div class="scroll-badge">
+      <svg class="spin" viewBox="0 0 100 100">
+        <path id="circlePath" fill="none" d="M 50,50 m -38,0 a 38,38 0 1,1 76,0 a 38,38 0 1,1 -76,0" />
+        <text>
+          <textPath href="#circlePath">SCROLL DOWN • VIEW LATEST WORK • </textPath>
+        </text>
+      </svg>
+      <span class="arrow">↓</span>
     </div>
   </div>
 </section>
