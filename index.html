@@ -23,32 +23,55 @@
   </nav>
 </header>
 
-<section class="dark-hero">
-  <svg width="0" height="0" style="position:absolute">
-    <defs>
-      <filter id="goo">
-        <feGaussianBlur in="SourceGraphic" stdDeviation="16" result="blur" />
-        <feColorMatrix in="blur" mode="matrix"
-          values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 22 -9" result="goo" />
-        <feComposite in="SourceGraphic" in2="goo" operator="atop" />
-      </filter>
-    </defs>
-  </svg>
+<section class="road-hero">
+  <div class="road-scene">
+    <svg class="road-svg" viewBox="0 0 1000 600" preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#120033"/>
+          <stop offset="45%" stop-color="#4b0fbd"/>
+          <stop offset="75%" stop-color="#2b0a8f"/>
+          <stop offset="100%" stop-color="#0000FF"/>
+        </linearGradient>
+        <radialGradient id="sunGrad" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="#ffffff"/>
+          <stop offset="18%" stop-color="#e6c6ff"/>
+          <stop offset="45%" stop-color="#9400D3" stop-opacity="0.7"/>
+          <stop offset="100%" stop-color="#9400D3" stop-opacity="0"/>
+        </radialGradient>
+      </defs>
 
-  <div class="dh-inner">
-    <div class="blob-scene">
-      <div class="blob blob-a"></div>
-      <div class="blob blob-b"></div>
-      <div class="blob blob-c"></div>
-      <div class="blob blob-d"></div>
-      <div class="blob blob-e"></div>
-    </div>
-    <div class="dh-dot orange"></div>
-    <div class="dh-dot yellow"></div>
+      <rect x="0" y="0" width="1000" height="600" fill="url(#skyGrad)"/>
 
-    <div class="dh-content">
+      <g class="sun-glow">
+        <circle cx="500" cy="258" r="150" fill="url(#sunGrad)"/>
+      </g>
+
+      <g class="hill-group">
+        <path d="M0,300 C150,230 300,320 500,260 C700,200 850,300 1000,270 L1000,600 L0,600 Z" fill="#150a2e"/>
+        <path d="M0,340 C200,280 380,360 520,300 C680,250 820,340 1000,320 L1000,600 L0,600 Z" fill="#0c0812"/>
+      </g>
+
+      <g class="road-group">
+        <path d="M 280,600 C 200,430 420,380 480,258 C 560,380 820,430 720,600 Z" fill="#1c0f3d"/>
+        <path class="center-line" d="M 500,600 C 430,470 500,380 480,258" stroke="#e9d9ff" stroke-width="6" fill="none" stroke-linecap="round"/>
+      </g>
+
+      <g class="boy-figure">
+        <ellipse cx="120" cy="596" rx="50" ry="10" fill="#0c0812" opacity="0.35"/>
+        <rect x="99" y="520" width="16" height="76" rx="8" fill="#0c0812"/>
+        <rect x="127" y="520" width="16" height="76" rx="8" fill="#0c0812"/>
+        <path d="M88,420 Q86,500 96,528 L146,528 Q154,495 150,420 Q119,398 88,420 Z" fill="#0c0812"/>
+        <rect x="60" y="430" width="16" height="66" rx="8" fill="#0c0812" transform="rotate(-18 68 430)"/>
+        <rect x="140" y="400" width="16" height="50" rx="8" fill="#0c0812" transform="rotate(58 148 400)"/>
+        <circle cx="118" cy="392" r="27" fill="#0c0812"/>
+        <path d="M92,382 Q118,352 146,382 Q144,362 118,358 Q94,360 92,382 Z" fill="#0c0812"/>
+      </g>
+    </svg>
+
+    <div class="road-hero-text">
       <p class="dh-eyebrow">Product &amp; UX Design</p>
-      <h1 class="dh-title">Digital Experiences,<br>Designed by Samuel Obiora</h1>
+      <h1 class="dh-title">Every Project Is a Turn<br>on the Road Ahead</h1>
       <p class="dh-sub">6 years across marketing, branding, and product design — for fintech, SaaS, and startups building what's next.</p>
       <div class="dh-actions">
         <a href="projects.html" class="btn btn-primary">View Projects</a>
@@ -60,7 +83,7 @@
       <svg class="spin" viewBox="0 0 100 100">
         <path id="circlePath" fill="none" d="M 50,50 m -38,0 a 38,38 0 1,1 76,0 a 38,38 0 1,1 -76,0" />
         <text>
-          <textPath href="#circlePath">SCROLL DOWN • VIEW LATEST WORK • </textPath>
+          <textPath href="#circlePath">SCROLL DOWN THE ROAD • VIEW LATEST WORK • </textPath>
         </text>
       </svg>
       <span class="arrow">↓</span>
@@ -95,7 +118,7 @@
     </div>
 
     <div class="projects-grid">
-      <a href="project-salesgroup.html" class="project-card reveal">
+      <a href="project-salesgroup.html" class="project-card drive-in from-left">
         <div class="project-media">
           <span class="tag">Fintech / AI</span>
           <span class="placeholder-mark">SG</span>
@@ -110,7 +133,7 @@
         </div>
       </a>
 
-      <a href="project-wordwriter.html" class="project-card reveal">
+      <a href="project-wordwriter.html" class="project-card drive-in from-right">
         <div class="project-media">
           <span class="tag">AI / Content</span>
           <span class="placeholder-mark">WW</span>
@@ -125,7 +148,7 @@
         </div>
       </a>
 
-      <a href="project-magicjar.html" class="project-card reveal">
+      <a href="project-magicjar.html" class="project-card drive-in from-left">
         <div class="project-media">
           <span class="tag">Sports / AI</span>
           <span class="placeholder-mark">MJ</span>
