@@ -207,28 +207,28 @@ header {
   transition: opacity 0.08s linear, transform 0.08s linear;
 }
 .road-hero-text .dh-eyebrow {
-  font-size: 0.8rem;
+  font-size: 1.1rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.16em;
   color: rgba(245,242,251,0.72);
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 }
 .road-hero-text .dh-title {
   font-family: 'Fraunces', serif;
   font-weight: 600;
-  font-size: clamp(2rem, 5vw, 3.8rem);
-  line-height: 1.1;
+  font-size: clamp(3rem, 9vw, 7rem);
+  line-height: 1.03;
   color: #f5f2fb;
   letter-spacing: -0.01em;
-  max-width: 760px;
+  max-width: 900px;
   margin: 0 auto;
 }
 .road-hero-text .dh-sub {
-  margin: 22px auto 0;
-  max-width: 460px;
-  color: rgba(245,242,251,0.75);
-  font-size: 1.02rem;
+  margin: 28px auto 0;
+  max-width: 560px;
+  color: rgba(245,242,251,0.78);
+  font-size: 1.4rem;
 }
 .road-hero-text .dh-actions {
   margin-top: 32px;
