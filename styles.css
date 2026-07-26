@@ -1,20 +1,20 @@
 /* ============================================
    Samuel Obiora — Portfolio Design System
-   Editorial warmth: cream, ink, rust accent
+   Clean white base, violet (#9400D3) + blue (#0000FF) brand accents
    ============================================ */
 
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Karla:wght@400;500;600;700&display=swap');
 
 :root {
-  --cream: #f4efe6;
-  --cream-deep: #ece4d4;
-  --ink: #1c1a17;
-  --ink-soft: #46423c;
-  --rust: #c1502e;
-  --rust-deep: #9c3d21;
-  --olive: #6b6b4f;
-  --line: rgba(28, 26, 23, 0.14);
-  --paper-shadow: 0 1px 0 rgba(28,26,23,0.06);
+  --cream: #ffffff;
+  --cream-deep: #f6f1fc;
+  --ink: #181121;
+  --ink-soft: #564f63;
+  --rust: #9400D3;
+  --rust-deep: #0000FF;
+  --olive: #4b3f66;
+  --line: rgba(24, 17, 33, 0.13);
+  --paper-shadow: 0 1px 0 rgba(24,17,33,0.05);
   --radius: 2px;
   --ease: cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -66,7 +66,7 @@ header {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(244, 239, 230, 0.86);
+  background: rgba(255, 255, 255, 0.86);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--line);
 }
@@ -152,9 +152,9 @@ header {
 
 /* ---------- Dark Blob Hero (homepage) ---------- */
 .dark-hero {
-  --dh-bg-1: #0f1176;
-  --dh-bg-2: #1a1ba8;
-  --dh-text: #eef0fb;
+  --dh-bg-1: #120033;
+  --dh-bg-2: #2b0a8f;
+  --dh-text: #f5f2fb;
   background: radial-gradient(120% 100% at 50% 0%, var(--dh-bg-2), var(--dh-bg-1) 70%);
   color: var(--dh-text);
   position: relative;
@@ -183,7 +183,7 @@ header {
 .blob {
   position: absolute;
   border-radius: 50%;
-  background: radial-gradient(circle at 34% 28%, #a6f0ff 0%, #4fd2ff 28%, #2f6bff 62%, #17208f 100%);
+  background: radial-gradient(circle at 34% 28%, #e6c6ff 0%, #b347e8 26%, #9400D3 55%, #0000FF 100%);
   animation: blobFloat 9s ease-in-out infinite;
 }
 .blob-a { width: 380px; height: 380px; top: 6%; left: 50%; margin-left: -190px; animation-delay: 0s; }
@@ -204,8 +204,8 @@ header {
   z-index: 3;
   animation: dotDrift 6s ease-in-out infinite;
 }
-.dh-dot.orange { width: 20px; height: 20px; background: #eb5e28; top: 22%; left: 41%; animation-delay: 0.4s; }
-.dh-dot.yellow { width: 14px; height: 14px; background: #f2c94c; top: 12%; left: 55%; animation-delay: 1.4s; }
+.dh-dot.orange { width: 20px; height: 20px; background: #0000FF; top: 22%; left: 41%; animation-delay: 0.4s; }
+.dh-dot.yellow { width: 14px; height: 14px; background: #e6c6ff; top: 12%; left: 55%; animation-delay: 1.4s; }
 @keyframes dotDrift {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-10px); }
@@ -242,7 +242,7 @@ header {
   flex-wrap: wrap;
 }
 .dh-actions .btn-primary { background: var(--dh-text); color: var(--dh-bg-1); }
-.dh-actions .btn-primary:hover { background: #4fd2ff; color: var(--dh-bg-1); }
+.dh-actions .btn-primary:hover { background: #e6c6ff; color: var(--dh-bg-1); }
 .dh-actions .btn-outline { border-color: rgba(238,240,251,0.5); color: var(--dh-text); }
 .dh-actions .btn-outline:hover { background: var(--dh-text); color: var(--dh-bg-1); }
 
@@ -529,17 +529,17 @@ section { padding: 100px 0; }
   gap: 60px;
 }
 .contact-block h2 { color: var(--cream); font-size: clamp(2rem, 4vw, 3rem); }
-.contact-block .contact-copy { color: rgba(244,239,230,0.72); margin-top: 18px; max-width: 420px; }
+.contact-block .contact-copy { color: rgba(255,255,255,0.72); margin-top: 18px; max-width: 420px; }
 .contact-meta { margin-top: 40px; display: flex; flex-direction: column; gap: 16px; }
-.contact-meta a { font-weight: 600; border-bottom: 1px solid rgba(244,239,230,0.3); padding-bottom: 2px; width: fit-content; }
+.contact-meta a { font-weight: 600; border-bottom: 1px solid rgba(255,255,255,0.3); padding-bottom: 2px; width: fit-content; }
 
 .field { margin-bottom: 20px; }
-.field label { display: block; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 8px; color: rgba(244,239,230,0.6); }
+.field label { display: block; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 8px; color: rgba(255,255,255,0.6); }
 .field input, .field select, .field textarea {
   width: 100%;
   background: transparent;
   border: none;
-  border-bottom: 1px solid rgba(244,239,230,0.3);
+  border-bottom: 1px solid rgba(255,255,255,0.3);
   color: var(--cream);
   font-family: 'Karla', sans-serif;
   font-size: 1rem;
@@ -552,7 +552,7 @@ section { padding: 100px 0; }
 .field textarea { resize: vertical; min-height: 70px; }
 .contact-form .btn-primary { background: var(--rust); color: var(--cream); margin-top: 10px; border: none; cursor: pointer; }
 .contact-form .btn-primary:hover { background: var(--cream); color: var(--ink); }
-.form-note { font-size: 0.85rem; margin-top: 14px; color: rgba(244,239,230,0.5); }
+.form-note { font-size: 0.85rem; margin-top: 14px; color: rgba(255,255,255,0.5); }
 
 /* ---------- Footer ---------- */
 footer {
