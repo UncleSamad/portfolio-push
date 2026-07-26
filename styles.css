@@ -85,6 +85,37 @@ header {
   font-style: italic;
 }
 
+.status-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--ink-soft);
+  border: 1px solid var(--line);
+  padding: 6px 14px;
+  border-radius: 100px;
+}
+.status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #17c964;
+  box-shadow: 0 0 0 0 rgba(23, 201, 100, 0.5);
+  animation: statusPulse 2s infinite;
+  flex-shrink: 0;
+}
+.status-sep { opacity: 0.4; }
+#local-time { font-variant-numeric: tabular-nums; color: var(--ink); }
+@keyframes statusPulse {
+  0% { box-shadow: 0 0 0 0 rgba(23, 201, 100, 0.5); }
+  70% { box-shadow: 0 0 0 6px rgba(23, 201, 100, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(23, 201, 100, 0); }
+}
+@media (max-width: 900px) {
+  .status-badge { display: none; }
+}
+
 .nav-links {
   display: flex;
   gap: 36px;

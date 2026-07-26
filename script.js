@@ -11,6 +11,22 @@ document.addEventListener('DOMContentLoaded', () => {
   }, { threshold: 0.12 });
   revealEls.forEach(el => io.observe(el));
 
+  // Live local time badge (West Africa Time)
+  const timeEl = document.getElementById('local-time');
+  if (timeEl) {
+    const updateClock = () => {
+      const now = new Date();
+      const formatted = now.toLocaleTimeString('en-GB', {
+        hour: '2-digit',
+        minute: '2-digit',
+        timeZone: 'Africa/Lagos'
+      });
+      timeEl.textContent = formatted + ' WAT';
+    };
+    updateClock();
+    setInterval(updateClock, 1000 * 30);
+  }
+
   // Mobile menu toggle
   const toggle = document.querySelector('.menu-toggle');
   const links = document.querySelector('.nav-links');
