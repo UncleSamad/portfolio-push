@@ -23,88 +23,16 @@
   </nav>
 </header>
 
-<section class="road-hero">
-  <div class="road-scene">
-    <svg class="road-svg" viewBox="0 0 1000 600" preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stop-color="#120033"/>
-          <stop offset="45%" stop-color="#4b0fbd"/>
-          <stop offset="75%" stop-color="#2b0a8f"/>
-          <stop offset="100%" stop-color="#0000FF"/>
-        </linearGradient>
-        <radialGradient id="sunGrad" cx="50%" cy="50%" r="50%">
-          <stop offset="0%" stop-color="#ffffff"/>
-          <stop offset="18%" stop-color="#e6c6ff"/>
-          <stop offset="45%" stop-color="#9400D3" stop-opacity="0.7"/>
-          <stop offset="100%" stop-color="#9400D3" stop-opacity="0"/>
-        </radialGradient>
-        <linearGradient id="groundFade" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stop-color="#0c0812"/>
-          <stop offset="100%" stop-color="#050308"/>
-        </linearGradient>
-      </defs>
-
-      <rect x="0" y="0" width="1000" height="600" fill="url(#skyGrad)"/>
-
-      <g class="sun-glow">
-        <circle cx="500" cy="220" r="160" fill="url(#sunGrad)"/>
-      </g>
-
-      <!-- Tree canopy arching overhead, tunnel-of-trees feel -->
-      <g class="hill-group">
-        <path d="M0,0 L340,0 C 300,120 210,190 90,230 C 40,246 10,252 0,254 Z" fill="#150a2e"/>
-        <path d="M0,0 L260,0 C 225,105 150,165 55,195 C 25,205 5,210 0,212 Z" fill="#0c0812"/>
-        <path d="M1000,0 L660,0 C 700,120 790,190 910,230 C 960,246 990,252 1000,254 Z" fill="#150a2e"/>
-        <path d="M1000,0 L740,0 C 775,105 850,165 945,195 C 975,205 995,210 1000,212 Z" fill="#0c0812"/>
-      </g>
-
-      <g class="road-group">
-        <path d="M 240,600 C 260,480 160,430 310,350 C 400,300 460,260 500,220
-                 C 540,260 600,300 690,350 C 840,430 740,480 760,600 Z" fill="url(#groundFade)"/>
-        <path d="M 240,600 C 260,480 160,430 310,350 C 400,300 460,260 500,220
-                 C 540,260 600,300 690,350 C 840,430 740,480 760,600 Z"
-              fill="none" stroke="#3a2a63" stroke-width="2" stroke-opacity="0.5"/>
-
-        <g class="road-lines">
-          <path d="M495,600 C505,480 410,430 350,350 C 410,300 465,262 495,222"
-                fill="none" stroke="#f5ecff" stroke-width="3.4" stroke-linecap="round"/>
-          <path d="M505,600 C515,480 420,430 360,350 C 415,300 470,262 505,222"
-                fill="none" stroke="#f5ecff" stroke-width="3.4" stroke-linecap="round"/>
-        </g>
-      </g>
-
-      <g class="boy-figure">
-        <ellipse cx="120" cy="596" rx="50" ry="10" fill="#0c0812" opacity="0.35"/>
-        <rect x="99" y="520" width="16" height="76" rx="8" fill="#0c0812"/>
-        <rect x="127" y="520" width="16" height="76" rx="8" fill="#0c0812"/>
-        <path d="M88,420 Q86,500 96,528 L146,528 Q154,495 150,420 Q119,398 88,420 Z" fill="#0c0812"/>
-        <rect x="60" y="430" width="16" height="66" rx="8" fill="#0c0812" transform="rotate(-18 68 430)"/>
-        <rect x="140" y="400" width="16" height="50" rx="8" fill="#0c0812" transform="rotate(58 148 400)"/>
-        <circle cx="118" cy="392" r="27" fill="#0c0812"/>
-        <path d="M92,382 Q118,352 146,382 Q144,362 118,358 Q94,360 92,382 Z" fill="#0c0812"/>
-      </g>
-    </svg>
-
-    <div class="road-fade"></div>
-
-    <div class="road-hero-text">
-      <p class="dh-eyebrow">Samuel Obiora</p>
-      <h1 class="dh-title">Product Designer</h1>
-      <p class="dh-sub">I design awesome human experiences.</p>
-    </div>
-
-    <div class="scroll-badge">
-      <svg class="spin" viewBox="0 0 100 100">
-        <path id="circlePath" fill="none" d="M 50,50 m -38,0 a 38,38 0 1,1 76,0 a 38,38 0 1,1 -76,0" />
-        <text>
-          <textPath href="#circlePath">SCROLL DOWN THE ROAD • VIEW LATEST WORK • </textPath>
-        </text>
-      </svg>
-      <span class="arrow">↓</span>
-    </div>
+<section class="simple-hero">
+  <div class="sh-glow sh-glow-a"></div>
+  <div class="sh-glow sh-glow-b"></div>
+  <div class="sh-content reveal">
+    <p class="sh-eyebrow">Samuel Obiora</p>
+    <h1 class="sh-title">Product <span class="accent">Designer</span></h1>
+    <p class="sh-sub">I design awesome human experiences.</p>
   </div>
 </section>
+
 
 <section id="intro">
   <div class="wrap intro reveal">

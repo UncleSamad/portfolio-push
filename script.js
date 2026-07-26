@@ -11,28 +11,6 @@ document.addEventListener('DOMContentLoaded', () => {
   }, { threshold: 0.12 });
   revealEls.forEach(el => io.observe(el));
 
-  // Road hero scroll-driven "driving down the road" effect
-  const roadHero = document.querySelector('.road-hero');
-  const roadScene = document.querySelector('.road-scene');
-  if (roadHero && roadScene) {
-    let ticking = false;
-    const updateRoad = () => {
-      const rect = roadHero.getBoundingClientRect();
-      const scrollable = roadHero.offsetHeight - window.innerHeight;
-      let progress = scrollable > 0 ? -rect.top / scrollable : 0;
-      progress = Math.min(1, Math.max(0, progress));
-      roadScene.style.setProperty('--p', progress);
-      ticking = false;
-    };
-    window.addEventListener('scroll', () => {
-      if (!ticking) {
-        requestAnimationFrame(updateRoad);
-        ticking = true;
-      }
-    }, { passive: true });
-    updateRoad();
-  }
-
   // Mobile menu toggle
   const toggle = document.querySelector('.menu-toggle');
   const links = document.querySelector('.nav-links');

@@ -148,151 +148,59 @@ header {
   color: var(--cream);
 }
 
-/* ---------- Road Hero (homepage, scroll-driven) ---------- */
-.road-hero {
-  height: 220vh;
-  position: relative;
-}
-.road-scene {
-  --p: 0;
-  position: sticky;
-  top: 0;
-  height: 100vh;
-  overflow: hidden;
-  border-radius: 0;
-  background: #120033;
-}
-.road-svg { position: absolute; inset: 0; width: 100%; height: 100%; }
-.road-fade {
-  position: absolute;
-  left: 0; right: 0; bottom: 0;
-  height: 34vh;
-  background: linear-gradient(to bottom, rgba(18,0,51,0) 0%, rgba(18,0,51,0.55) 55%, var(--cream) 96%);
-  z-index: 4;
-  pointer-events: none;
-}
-
-.hill-group {
-  transform: scale(calc(1 + var(--p) * 0.06));
-  transform-origin: 500px 220px;
-  transition: transform 0.08s linear;
-}
-.sun-glow {
-  transform: scale(calc(1 + var(--p) * 0.35));
-  transform-origin: 500px 220px;
-  opacity: calc(0.65 + var(--p) * 0.35);
-  transition: transform 0.08s linear, opacity 0.08s linear;
-}
-.road-group {
-  transform: scale(calc(1 + var(--p) * 0.55));
-  transform-origin: 500px 220px;
-  transition: transform 0.08s linear;
-}
-.road-lines {
-  opacity: 0.92;
-}
-.boy-figure {
-  animation: boyBob 2.6s ease-in-out infinite;
-  transform-origin: 118px 600px;
-}
-@keyframes boyBob {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-4px); }
-}
-
-.road-hero-text {
-  position: absolute;
-  top: 14%;
-  left: 0; right: 0;
-  z-index: 5;
+/* ---------- Simple Hero (homepage) ---------- */
+.simple-hero {
+  min-height: 92vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  padding: 0 24px;
-  opacity: calc(1 - var(--p) * 1.5);
-  transform: translateY(calc(var(--p) * -60px));
-  transition: opacity 0.08s linear, transform 0.08s linear;
+  position: relative;
+  overflow: hidden;
+  background: var(--cream);
 }
-.road-hero-text .dh-eyebrow {
+.sh-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.32;
+  z-index: 0;
+}
+.sh-glow-a { width: 560px; height: 560px; background: var(--rust); top: -140px; left: -120px; }
+.sh-glow-b { width: 480px; height: 480px; background: var(--rust-deep); bottom: -160px; right: -110px; }
+
+.sh-content {
+  position: relative;
+  z-index: 2;
+  max-width: 920px;
+  padding: 0 24px;
+}
+.sh-eyebrow {
   font-size: 1.1rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.16em;
-  color: rgba(245,242,251,0.72);
-  margin-bottom: 24px;
+  color: var(--rust-deep);
+  margin-bottom: 22px;
 }
-.road-hero-text .dh-title {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: 600;
+.sh-title {
   font-size: clamp(3rem, 9vw, 7rem);
-  line-height: 1.03;
-  color: #f5f2fb;
-  letter-spacing: -0.01em;
-  max-width: 900px;
-  margin: 0 auto;
+  line-height: 1.02;
+  font-weight: 700;
+  color: var(--ink);
+  letter-spacing: -0.02em;
 }
-.road-hero-text .dh-sub {
+.sh-title .accent { color: var(--rust); }
+.sh-sub {
   margin: 28px auto 0;
   max-width: 560px;
-  color: rgba(245,242,251,0.78);
   font-size: 1.4rem;
+  color: var(--ink-soft);
 }
-.road-hero-text .dh-actions {
-  margin-top: 32px;
-  display: flex;
-  gap: 16px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-.road-hero-text .btn-primary { background: #f5f2fb; color: #120033; }
-.road-hero-text .btn-primary:hover { background: #e6c6ff; color: #120033; }
-.road-hero-text .btn-outline { border-color: rgba(245,242,251,0.5); color: #f5f2fb; }
-.road-hero-text .btn-outline:hover { background: #f5f2fb; color: #120033; }
-
-.scroll-badge {
-  position: absolute;
-  bottom: 30px;
-  left: 50%;
-  margin-left: -50px;
-  width: 100px; height: 100px;
-  z-index: 6;
-  opacity: calc(1 - var(--p) * 2);
-  transition: opacity 0.08s linear;
-}
-.scroll-badge svg.spin { animation: spin 14s linear infinite; }
-.scroll-badge text {
-  fill: rgba(245,242,251,0.75);
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: 7.2px;
-  font-weight: 700;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-}
-.scroll-badge .arrow {
-  position: absolute;
-  top: 50%; left: 50%;
-  transform: translate(-50%, -50%);
-  color: #f5f2fb;
-  font-size: 1.1rem;
-  animation: arrowBounce 1.8s ease-in-out infinite;
-}
-@keyframes spin { to { transform: rotate(360deg); } }
-@keyframes arrowBounce {
-  0%, 100% { transform: translate(-50%, -50%); }
-  50% { transform: translate(-50%, -42%); }
-}
-
-/* Drive-by reveal for featured project cards */
-.drive-in {
-  opacity: 0;
-  filter: blur(6px);
-  transition: opacity 0.6s var(--ease), transform 0.6s var(--ease), filter 0.6s var(--ease);
-}
-.drive-in.from-left { transform: translateX(-90px) skewX(-4deg); }
-.drive-in.from-right { transform: translateX(90px) skewX(4deg); }
-.drive-in.in { opacity: 1; transform: translateX(0) skewX(0); filter: blur(0); }
 
 @media (max-width: 700px) {
-  .road-hero { height: 180vh; }
-  .road-hero-text .dh-title { font-size: 2rem; }
+  .simple-hero { min-height: 80vh; }
+  .sh-glow-a, .sh-glow-b { width: 320px; height: 320px; }
 }
 
 /* ---------- Hero (secondary pages) ---------- */
