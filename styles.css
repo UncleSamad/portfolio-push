@@ -161,30 +161,37 @@ header {
   top: 0;
   height: 100vh;
   overflow: hidden;
-  border-radius: 0 0 28px 28px;
+  border-radius: 0;
   background: #120033;
 }
 .road-svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+.road-fade {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 34vh;
+  background: linear-gradient(to bottom, rgba(18,0,51,0) 0%, rgba(18,0,51,0.55) 55%, var(--cream) 96%);
+  z-index: 4;
+  pointer-events: none;
+}
 
 .hill-group {
   transform: scale(calc(1 + var(--p) * 0.06));
-  transform-origin: 500px 258px;
+  transform-origin: 500px 220px;
   transition: transform 0.08s linear;
 }
 .sun-glow {
   transform: scale(calc(1 + var(--p) * 0.35));
-  transform-origin: 500px 258px;
+  transform-origin: 500px 220px;
   opacity: calc(0.65 + var(--p) * 0.35);
   transition: transform 0.08s linear, opacity 0.08s linear;
 }
 .road-group {
   transform: scale(calc(1 + var(--p) * 0.55));
-  transform-origin: 500px 258px;
+  transform-origin: 500px 220px;
   transition: transform 0.08s linear;
 }
-.center-line {
-  stroke-dasharray: 16 20;
-  stroke-dashoffset: calc(var(--p) * -900);
+.road-lines {
+  opacity: 0.92;
 }
 .boy-figure {
   animation: boyBob 2.6s ease-in-out infinite;

@@ -39,22 +39,39 @@
           <stop offset="45%" stop-color="#9400D3" stop-opacity="0.7"/>
           <stop offset="100%" stop-color="#9400D3" stop-opacity="0"/>
         </radialGradient>
+        <linearGradient id="groundFade" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#0c0812"/>
+          <stop offset="100%" stop-color="#050308"/>
+        </linearGradient>
       </defs>
 
       <rect x="0" y="0" width="1000" height="600" fill="url(#skyGrad)"/>
 
       <g class="sun-glow">
-        <circle cx="500" cy="258" r="150" fill="url(#sunGrad)"/>
+        <circle cx="500" cy="220" r="160" fill="url(#sunGrad)"/>
       </g>
 
+      <!-- Tree canopy arching overhead, tunnel-of-trees feel -->
       <g class="hill-group">
-        <path d="M0,300 C150,230 300,320 500,260 C700,200 850,300 1000,270 L1000,600 L0,600 Z" fill="#150a2e"/>
-        <path d="M0,340 C200,280 380,360 520,300 C680,250 820,340 1000,320 L1000,600 L0,600 Z" fill="#0c0812"/>
+        <path d="M0,0 L340,0 C 300,120 210,190 90,230 C 40,246 10,252 0,254 Z" fill="#150a2e"/>
+        <path d="M0,0 L260,0 C 225,105 150,165 55,195 C 25,205 5,210 0,212 Z" fill="#0c0812"/>
+        <path d="M1000,0 L660,0 C 700,120 790,190 910,230 C 960,246 990,252 1000,254 Z" fill="#150a2e"/>
+        <path d="M1000,0 L740,0 C 775,105 850,165 945,195 C 975,205 995,210 1000,212 Z" fill="#0c0812"/>
       </g>
 
       <g class="road-group">
-        <path d="M 280,600 C 200,430 420,380 480,258 C 560,380 820,430 720,600 Z" fill="#1c0f3d"/>
-        <path class="center-line" d="M 500,600 C 430,470 500,380 480,258" stroke="#e9d9ff" stroke-width="6" fill="none" stroke-linecap="round"/>
+        <path d="M 240,600 C 260,480 160,430 310,350 C 400,300 460,260 500,220
+                 C 540,260 600,300 690,350 C 840,430 740,480 760,600 Z" fill="url(#groundFade)"/>
+        <path d="M 240,600 C 260,480 160,430 310,350 C 400,300 460,260 500,220
+                 C 540,260 600,300 690,350 C 840,430 740,480 760,600 Z"
+              fill="none" stroke="#3a2a63" stroke-width="2" stroke-opacity="0.5"/>
+
+        <g class="road-lines">
+          <path d="M495,600 C505,480 410,430 350,350 C 410,300 465,262 495,222"
+                fill="none" stroke="#f5ecff" stroke-width="3.4" stroke-linecap="round"/>
+          <path d="M505,600 C515,480 420,430 360,350 C 415,300 470,262 505,222"
+                fill="none" stroke="#f5ecff" stroke-width="3.4" stroke-linecap="round"/>
+        </g>
       </g>
 
       <g class="boy-figure">
@@ -68,6 +85,8 @@
         <path d="M92,382 Q118,352 146,382 Q144,362 118,358 Q94,360 92,382 Z" fill="#0c0812"/>
       </g>
     </svg>
+
+    <div class="road-fade"></div>
 
     <div class="road-hero-text">
       <p class="dh-eyebrow">Samuel Obiora</p>
