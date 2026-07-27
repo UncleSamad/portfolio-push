@@ -299,58 +299,34 @@ header {
   .hero-composition { max-width: 380px; }
 }
 
-/* ---------- Hero floating motifs ---------- */
-.hero-floaters { position: absolute; inset: 0; pointer-events: none; z-index: 0; }
-.hf {
-  position: absolute;
-  width: 7cqw;
-  opacity: 0;
-  animation: hfIn 0.9s var(--ease) both, hfFloat 6s ease-in-out infinite;
-}
-.hf-holo {
-  width: 20cqw;
-  aspect-ratio: 4 / 3;
-  border-radius: 10%;
-  overflow: hidden;
-  background: linear-gradient(160deg, #0a0a1f, #050510);
-  box-shadow: 0 24px 48px rgba(24,17,33,0.28);
+/* ---------- Full-page ambient holo background ---------- */
+.page-holo-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
   display: flex;
   align-items: flex-end;
-  gap: 5%;
-  padding: 10%;
-  animation: hfIn 1s var(--ease) both 0.3s, hfFloat 7.5s ease-in-out infinite 1.3s;
+  gap: 1.4vw;
+  padding: 0 1.5vw;
+  opacity: 0.09;
+  pointer-events: none;
+  overflow: hidden;
 }
-.holo-bar {
+.page-holo-bg .bar {
   flex: 1;
-  height: var(--h, 60%);
-  border-radius: 3px 3px 0 0;
+  height: var(--h, 50%);
+  border-radius: 6px 6px 0 0;
   background: linear-gradient(180deg, var(--c1), var(--c2));
   transform-origin: bottom;
-  animation: holoShift var(--dur, 4s) ease-in-out infinite;
+  animation: holoShift var(--dur, 5s) ease-in-out infinite;
   animation-delay: var(--del, 0s);
 }
 @keyframes holoShift {
   0%, 100% { transform: scaleY(1); filter: hue-rotate(0deg) brightness(1); }
-  50% { transform: scaleY(1.18); filter: hue-rotate(30deg) brightness(1.2); }
+  50% { transform: scaleY(1.12); filter: hue-rotate(30deg) brightness(1.15); }
 }
-
-.hf-dot    {
-  width: 1.6cqw; aspect-ratio: 1; border-radius: 50%; background: var(--rust-deep);
-  animation-delay: 0.65s, 1.55s; animation-duration: 0.9s, 5s;
-}
-.hf-spark  { width: 4.2cqw; animation-delay: 0.85s, 1.75s; animation-duration: 0.9s, 5.5s; }
-
-@keyframes hfIn {
-  0%   { opacity: 0; transform: translateY(24px) scale(0.7) rotate(-10deg); }
-  100% { opacity: 0.9; transform: translateY(0) scale(1) rotate(0deg); }
-}
-@keyframes hfFloat {
-  0%, 100% { transform: translateY(0) rotate(0deg); }
-  50% { transform: translateY(-12px) rotate(4deg); }
-}
-
 @media (max-width: 700px) {
-  .hero-floaters { display: none; }
+  .page-holo-bg { opacity: 0.07; gap: 2.5vw; }
 }
 
 /* ---------- Hero (secondary pages) ---------- */
