@@ -210,8 +210,8 @@ header {
 
 .hero-composition {
   position: relative;
-  width: 100%;
-  max-width: 640px;
+  width: 92%;
+  max-width: 1200px;
   aspect-ratio: 1088 / 1148;
   margin: 0 auto;
   container-type: inline-size;
@@ -221,24 +221,22 @@ header {
   position: absolute;
   top: 14%;
   left: 9%;
-  font-size: clamp(0.75rem, 2.6cqw, 1.05rem);
+  font-size: clamp(1rem, 2.6cqw, 1.6rem);
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.06em;
   color: var(--ink);
-  transform: scaleX(0.88);
-  transform-origin: left center;
 }
 
 .hc-word {
   position: absolute;
   font-weight: 900;
-  font-size: clamp(2.6rem, 15cqw, 8rem);
+  font-size: clamp(3.5rem, 15cqw, 11rem);
   line-height: 0.82;
-  letter-spacing: 0;
+  letter-spacing: -0.01em;
   color: var(--ink);
   white-space: nowrap;
-  transform: scaleX(0.72);
+  transform: scaleX(0.9);
   transform-origin: left center;
 }
 .hc-word-top { top: 18%; left: 8%; }
