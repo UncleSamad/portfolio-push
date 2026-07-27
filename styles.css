@@ -299,6 +299,35 @@ header {
   .hero-composition { max-width: 380px; }
 }
 
+/* ---------- Hero floating motifs ---------- */
+.hero-floaters { position: absolute; inset: 0; pointer-events: none; z-index: 0; }
+.hf {
+  position: absolute;
+  width: 7cqw;
+  opacity: 0;
+  animation: hfIn 0.9s var(--ease) both, hfFloat 6s ease-in-out infinite;
+}
+.hf-cursor { animation-delay: 0.2s, 1.1s; width: 5.5cqw; }
+.hf-card   { animation-delay: 0.45s, 1.35s; width: 8.5cqw; animation-duration: 0.9s, 7s; }
+.hf-dot    {
+  width: 1.6cqw; aspect-ratio: 1; border-radius: 50%; background: var(--rust-deep);
+  animation-delay: 0.65s, 1.55s; animation-duration: 0.9s, 5s;
+}
+.hf-spark  { width: 4.2cqw; animation-delay: 0.85s, 1.75s; animation-duration: 0.9s, 5.5s; }
+
+@keyframes hfIn {
+  0%   { opacity: 0; transform: translateY(24px) scale(0.7) rotate(-10deg); }
+  100% { opacity: 0.9; transform: translateY(0) scale(1) rotate(0deg); }
+}
+@keyframes hfFloat {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-12px) rotate(4deg); }
+}
+
+@media (max-width: 700px) {
+  .hero-floaters { display: none; }
+}
+
 /* ---------- Hero (secondary pages) ---------- */
 .hero {
   padding: 110px 0 90px;
