@@ -224,19 +224,22 @@ header {
   font-size: clamp(0.75rem, 2.6cqw, 1.05rem);
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.06em;
   color: var(--ink);
+  transform: scaleX(0.88);
+  transform-origin: left center;
 }
 
 .hc-word {
   position: absolute;
-  font-weight: 800;
-  font-stretch: condensed;
-  font-size: clamp(2.4rem, 13cqw, 7rem);
-  line-height: 0.85;
-  letter-spacing: -0.02em;
+  font-weight: 900;
+  font-size: clamp(2.6rem, 15cqw, 8rem);
+  line-height: 0.82;
+  letter-spacing: 0;
   color: var(--ink);
   white-space: nowrap;
+  transform: scaleX(0.72);
+  transform-origin: left center;
 }
 .hc-word-top { top: 18%; left: 8%; }
 
@@ -280,7 +283,11 @@ header {
   right: 6%;
   text-align: right;
 }
-.hc-word-bottom { position: static; }
+.hc-word-bottom {
+  position: static;
+  display: inline-block;
+  transform-origin: right center;
+}
 .hc-tagline {
   margin-top: 4%;
   font-size: clamp(0.8rem, 2.6cqw, 1.05rem);
