@@ -254,19 +254,7 @@ header {
   overflow: hidden;
   object-fit: cover;
   display: block;
-}
-.hc-image-placeholder {
-  background: linear-gradient(160deg, var(--rust), var(--rust-deep));
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 10%;
-}
-.hc-image-placeholder span {
-  color: rgba(255,255,255,0.85);
-  font-size: clamp(0.7rem, 2.2cqw, 0.9rem);
-  font-weight: 600;
+  box-shadow: 0 20px 40px rgba(24,17,33,0.18);
 }
 
 .hc-badge {
