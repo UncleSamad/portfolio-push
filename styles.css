@@ -213,12 +213,20 @@ header {
 .sh-glow {
   position: absolute;
   border-radius: 50%;
-  filter: blur(100px);
-  opacity: 0.32;
+  filter: blur(180px);
+  opacity: 0.22;
   z-index: 0;
 }
-.sh-glow-a { width: 560px; height: 560px; background: var(--rust); top: -140px; left: -120px; }
-.sh-glow-b { width: 480px; height: 480px; background: var(--rust-deep); bottom: -160px; right: -110px; }
+.sh-glow-a { width: 560px; height: 560px; background: var(--rust); top: -60px; left: -60px; }
+.sh-glow-b { width: 480px; height: 480px; background: var(--rust-deep); bottom: 40px; right: -20px; }
+.sh-fade {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 40%;
+  background: linear-gradient(to bottom, rgba(255,255,255,0), var(--cream) 88%);
+  z-index: 1;
+  pointer-events: none;
+}
 
 .sh-content {
   position: relative;
